@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Determine Envionment
+declare $(awk -F= '$1=="ID_LIKE" { print "CURRENTENV=" $2 ;}' /etc/os-release)
+
 # Update/Upgrade
 sudo apt update && sudo apt upgrade -y
 
