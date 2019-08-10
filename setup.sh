@@ -7,7 +7,7 @@ declare $(awk -F= '$1=="ID_LIKE" { print "CURRENTENV=" $2 ;}' /etc/os-release)
 sudo apt update && sudo apt upgrade -y
 
 # Install useful packages
-sudo apt install python3 python3-pip git curl zsh screen tmux htop iftop tshark gpg mosh apt-transport-https ca-certificates gnupg-agent software-properties-common -y
+sudo apt install python3 python3-pip git curl zsh screen tmux htop iftop tshark gpg xsel mosh apt-transport-https ca-certificates gnupg-agent software-properties-common -y
 
 # Useful pip installs
 sudo pip3 install requests twisted beautifulsoup4 scapy scrapy ipython
@@ -22,8 +22,11 @@ sudo zerotier-cli join 12ac4a1e719def45
 # Clone dotfiles repo
 git clone https://github.com/biodrone/dotfiles ~/dotfiles
 
-# Copy tmux config
+# Copy TMUX config
 cp ~/dotfiles/.tmux.conf ~
+
+# Install TMUX Plugin Manager
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm && ~/.tmux/plugins/tpm/bin/install_plugins
 
 # Install docker
 curl -fsSL https://get.docker.com -o ~/dotfiles/get-docker.sh
