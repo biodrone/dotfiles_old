@@ -42,3 +42,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias l="ls -lah"
+alias dcdown="docker-compose down"
+alias dcup="docker-compose up -d"
+alias dclogs="docker-compose logs -f"
+alias dcrebuild="docker-compose down && docker-compose up -d"
