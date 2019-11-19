@@ -6,9 +6,16 @@ ZSH_THEME="agnoster"
 export UPDATE_ZSH_DAYS=1
 
 plugins=(
+  archlinux
   git
   docker
   npm
+  emoji
+  go
+  rsync
+  tmux
+  vagrant
+  zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
