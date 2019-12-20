@@ -25,3 +25,6 @@ alias dcdown="docker-compose down"
 alias dcup="docker-compose up -d"
 alias dclogs="docker-compose logs -f"
 alias dcrebuild="docker-compose down && docker-compose up -d"
+
+#---Docker Variables---#
+export DOCKER_CONFIG=~/.config/docker
