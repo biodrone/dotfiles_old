@@ -7,7 +7,7 @@ declare $(awk -F= '$1=="ID_LIKE" { print "CURRENTENV=" $2 ;}' /etc/os-release)
 sudo apt update && sudo apt upgrade -y
 
 # Install useful packages
-sudo apt install python3 python3-pip git curl zsh screen tmux htop iftop tshark gpg xsel mosh apt-transport-https ca-certificates gnupg-agent software-properties-common -y
+sudo apt install -y python3 python3-pip git curl zsh screen tmux htop iftop gpg xsel mosh apt-transport-https ca-certificates gnupg-agent software-properties-common
 
 # Useful pip installs
 sudo pip3 install requests twisted beautifulsoup4 scapy scrapy ipython
