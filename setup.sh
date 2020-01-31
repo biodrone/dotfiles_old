@@ -19,28 +19,25 @@ if z=$(curl -s 'https://install.zerotier.com/' | gpg); then echo "$z" | sudo bas
 # Join My ZeroTier Network
 sudo zerotier-cli join 12ac4a1e719def45
 
-# Clone dotfiles repo
-git clone https://github.com/biodrone/dotfiles ~/dotfiles
-
 # Copy TMUX config
-cp ~/dotfiles/.tmux.conf ~
+cp /opt/dotfiles/.tmux.conf ~
 
 # Install TMUX Plugin Manager
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm && ~/.tmux/plugins/tpm/bin/install_plugins
 
 # Install docker
-curl -fsSL https://get.docker.com -o ~/dotfiles/get-docker.sh
-sh ~/dotfiles/get-docker.sh
+curl -fsSL https://get.docker.com -o ~/opt/dotfiles/get-docker.sh
+sh /opt/dotfiles/get-docker.sh
 
-# Grab OhMyZshell
+# Install OhMyZshell
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
-#OMZ Plugins
+# OMZ Plugins
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
 # Copy OMZ config
 rm ~/.zshrc
-cp ~/dotfiles/.zshrc ~
+cp /opt/dotfiles/.zshrc ~
 source ~/.zshrc
 
 # Clean up files/dirs
