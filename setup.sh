@@ -13,7 +13,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt install -y python3 python3-pip git curl 
 sudo pip3 install requests twisted beautifulsoup4 scapy scrapy ipython
 
 # Install ZeroTier (the secure way)
-curl -s 'https://raw.githubusercontent.com/zerotier/download.zerotier.com/master/htdocs/contact%40zerotier.com.gpg' | gpg --import && \
+curl -s 'https://raw.githubusercontent.com/zerotier/ZeroTierOne/master/doc/contact%40zerotier.com.gpg' | gpg --import && \
 if z=$(curl -s 'https://install.zerotier.com/' | gpg); then echo "$z" | sudo bash; fi
 
 # Join My ZeroTier Network
@@ -26,7 +26,7 @@ cp /opt/dotfiles/.tmux.conf ~
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm && ~/.tmux/plugins/tpm/bin/install_plugins
 
 # Install docker
-curl -fsSL https://get.docker.com -o ~/opt/dotfiles/get-docker.sh
+curl -fsSL https://get.docker.com -o /opt/dotfiles/get-docker.sh
 sh /opt/dotfiles/get-docker.sh
 
 # Install OhMyZshell
