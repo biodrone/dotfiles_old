@@ -45,6 +45,3 @@ source ~/.zshrc
 
 # Change shell to zsh
 chsh -s $(which zsh)
-
-# Reboot
-sudo reboot
