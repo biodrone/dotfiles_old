@@ -45,8 +45,7 @@ cp ~/dotfiles/.zshrc ~
 source ~/.zshrc
 
 # Clean up files/dirs
-rm -R ~/dotfiles
-rm install.sh
+(crontab -l 2>/dev/null; echo "@reboot (rm -R /opt/dotfiles)") | crontab -
 
 # Change shell to zsh
 chsh -s $(which zsh)
