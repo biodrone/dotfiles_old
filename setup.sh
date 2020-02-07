@@ -44,4 +44,4 @@ source ~/.zshrc
 (crontab -l 2>/dev/null; echo "@reboot (rm -R /opt/dotfiles)") | crontab -
 
 # Change shell to zsh
-chsh -s $(which zsh)
+sudo chsh -s $(which zsh)
