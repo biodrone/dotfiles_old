@@ -39,7 +39,6 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 # Copy OMZ config
 rm ~/.zshrc
 cp /opt/dotfiles/.zshrc ~
-source ~/.zshrc
 
 # Clean up files/dirs
 (crontab -l 2>/dev/null; echo "@reboot (rm -R /opt/dotfiles)") | crontab -
