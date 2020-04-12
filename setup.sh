@@ -23,7 +23,8 @@ sudo zerotier-cli join 12ac4a1e719def45
 cp /opt/dotfiles/.tmux.conf ~
 
 # Install TMUX Plugin Manager
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm && ~/.tmux/plugins/tpm/bin/install_plugins
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+tmux new ~/.tmux/plugins/tpm/bin/install_plugins
 
 # Install docker
 curl -fsSL https://get.docker.com -o /opt/dotfiles/get-docker.sh
