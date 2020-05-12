@@ -17,6 +17,10 @@ plugins=(
   zsh-syntax-highlighting
 )
 
+#---Launch SSH Agent---#
+eval `ssh-agent -s` >> /dev/null
+
+#---Source OMZ---#
 source $ZSH/oh-my-zsh.sh
 
 #---Aliases---#
