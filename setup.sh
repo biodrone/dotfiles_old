@@ -10,7 +10,7 @@ sudo apt update && sudo DEBIAN_FRONTEND=noninteractive apt upgrade -y
 sudo DEBIAN_FRONTEND=noninteractive apt install -y python3 python3-pip git curl zsh screen tmux htop iftop gpg xsel mosh apt-transport-https ca-certificates gnupg-agent software-properties-common fonts-powerline linuxlogo lolcat
 
 # Useful pip installs
-sudo pip3 install requests twisted beautifulsoup4 scapy scrapy ipython
+sudo pip3 install requests scapy scrapy
 
 # Install ZeroTier (the secure way)
 curl -s 'https://raw.githubusercontent.com/zerotier/ZeroTierOne/master/doc/contact%40zerotier.com.gpg' | gpg --import && \
