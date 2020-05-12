@@ -32,3 +32,6 @@ alias dcrebuild="docker-compose down && docker-compose up -d"
 
 #---Docker Variables---#
 export DOCKER_CONFIG=~/.config/docker
+
+#---Output Pretty Logo to Terminal---#
+rel=$(lsb_release -i -s); linuxlogo -L ${rel:l} -a -y -u -k -s | lolcat --freq 0.3 --spread 3.1
