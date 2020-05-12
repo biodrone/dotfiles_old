@@ -30,7 +30,7 @@ tmux new ~/.tmux/plugins/tpm/bin/install_plugins
 git clone https://github.com/adobe-fonts/source-code-pro.git /opt/dotfiles/source-code-pro
 cp /opt/dotfiles/source-code-pro/OTF/*.otf /usr/local/share/fonts
 fc-cache -f -v
-setfont /usr/local/share/fonts/SourceCodePro-Black.otf
+setfont /usr/local/share/fonts/SourceCodePro-Regular.otf
 
 # Install docker
 curl -fsSL https://get.docker.com -o /opt/dotfiles/get-docker.sh
