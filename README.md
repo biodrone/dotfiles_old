@@ -47,3 +47,8 @@ Feel free to use but YMMV ;)
 ### ZSH Theme 
 
 - [agnoster](https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#agnoster)
+
+### TMUX Plugins
+
+- [TPM (TMUX Plugin Manager)](https://github.com/tmux-plugins/tpm)
+- [TMUX Yank](https://github.com/tmux-plugins/tmux-yank)
