@@ -35,7 +35,11 @@ prompt_end() {
 }
 
 #---Aliases---#
+#---Basics
 alias l="ls -lah"
+alias cl="clear"
+#---Docker
+alias dbuild="docker build"
 alias dcbuild="docker-compose build"
 alias dcdown="docker-compose down"
 alias dcup="docker-compose up -d"
