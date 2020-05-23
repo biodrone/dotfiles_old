@@ -10,18 +10,20 @@ set $term st
 set $browser firefox
 
 ###---Keyboard Layout---###
-exec --no-startup-id setxkbmap -layout us,gb -option 'grp:alt_shift_toggle'
+exec --no-startup-id setxkbmap -layout us -option 'grp:alt_shift_toggle'
 
 ###---i3-gaps---###
 hide_edge_borders both
 for_window [class="^.*"] border pixel 1
-gaps inner 5
-gaps outer 5
+gaps inner 2
+gaps outer 2
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:monospace 8
-font Inconsolata:style=Regular 10
+#font pango:monospace 8
+font pango:Inconsolata for Powerline 10
+#font pango:TerminessTTF Nerd Font 10
+#font pango:Source Code Pro 10
 
 ###---Graphical Autostarts---###
 # Wallpaper
@@ -222,12 +224,7 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-###---Dropdown Windows---###
-for_window [instance="dropdown"] floating enable
-for_window [instance="dropdown"] resize set 625 400
-for_window [instance="dropdown"] move position center
-for_window [instance="dropdown"] move scratchpad
-exec --no-startup-id $term -name dropdown -e tmux
-
 # User bindings
 bindsym $mod+u	[instance="dropdown"] scratchpad show; move position center
+bindsym --release Print exec "flameshot gui"
+bindsym --release $mod+Print exec "flameshot full -p /home/biodrone/Pictures/Screenshots"
