@@ -10,7 +10,7 @@ plugins=(
   docker
   npm
   emoji
-  go
+  golang
   rsync
   tmux
   vagrant
