@@ -32,9 +32,10 @@ sudo cp /opt/dotfiles/source-code-pro/OTF/*.otf /usr/local/share/fonts
 fc-cache -f -v
 setfont /usr/local/share/fonts/SourceCodePro-Regular.otf
 
-# Install docker
+# Install docker and docker-compose
 curl -fsSL https://get.docker.com -o /opt/dotfiles/get-docker.sh
 sh /opt/dotfiles/get-docker.sh
+sudo apt install -y docker-compose
 
 # Install OhMyZshell
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
