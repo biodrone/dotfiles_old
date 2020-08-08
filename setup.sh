@@ -37,6 +37,10 @@ curl -fsSL https://get.docker.com -o /opt/dotfiles/get-docker.sh
 sh /opt/dotfiles/get-docker.sh
 sudo apt install -y docker-compose
 
+# Add user to docker group
+sudo groupadd docker
+sudo usermod -aG docker $USER
+
 # Install OhMyZshell
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
