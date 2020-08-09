@@ -7,7 +7,7 @@
 sudo apt update && sudo DEBIAN_FRONTEND=noninteractive apt upgrade -y
 
 # Install useful packages
-sudo DEBIAN_FRONTEND=noninteractive apt install -y python3 python3-pip git curl zsh screen tmux htop iftop gpg xsel mosh apt-transport-https ca-certificates gnupg-agent software-properties-common fonts-powerline linuxlogo lolcat
+sudo DEBIAN_FRONTEND=noninteractive apt install -y python3 python3-pip git curl zsh screen tmux htop iftop gpg xsel mosh apt-transport-https ca-certificates gnupg-agent software-properties-common fonts-powerline linuxlogo lolcat neovim
 
 # Useful pip installs
 sudo pip3 install requests scapy scrapy
