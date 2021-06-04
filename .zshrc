@@ -1,4 +1,4 @@
-# Oh-My-ZSH Path and Options
+#---Oh-My-ZSH Path and Options---#
 export ZSH="$HOME/.oh-my-zsh"
 export UPDATE_ZSH_DAYS=1
 ZSH_THEME="agnoster"
@@ -35,9 +35,11 @@ prompt_end() {
 }
 
 #---Aliases---#
+
 #---Basics---#
 alias l="ls -lah"
 alias cl="clear"
+
 #---Docker---#
 alias dbuild="docker build"
 alias dcbuild="docker-compose build"
@@ -45,8 +47,13 @@ alias dcdown="docker-compose down"
 alias dcup="docker-compose up -d"
 alias dclogs="docker-compose logs -f"
 alias dcrebuild="docker-compose down && docker-compose up -d"
+alias dcpull="docker-compose pull"
+
 #---Terraform---#
 alias terraform="tf"
 
 #---Docker Variables---#
 export DOCKER_CONFIG=~/.config/docker
+
+#---Output Pretty Logo to Terminal---#
+rel=$(lsb_release -i -s); linuxlogo -L ${rel:l} -a -y -u -k -s | lolcat --freq 0.3 --spread 3.1
