@@ -6,7 +6,11 @@ ZSH_THEME="agnoster"
 #---ZSH Plugins---#
 plugins=(
   archlinux
+  ansible
+  aws
   git
+  helm
+  kubectl
   docker
   npm
   emoji
