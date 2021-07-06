@@ -12,13 +12,15 @@ plugins=(
   emoji
   golang
   rsync
+  terraform
   tmux
   vagrant
   zsh-syntax-highlighting
 )
 
 #---Launch SSH Agent---#
-eval `ssh-agent -s` >> /dev/null
+# Uncomment if local machine has SSH weirdness
+#eval `ssh-agent -s` >> /dev/null
 
 #---Source OMZ---#
 source $ZSH/oh-my-zsh.sh
@@ -38,7 +40,6 @@ prompt_end() {
 
 #---Basics---#
 alias l="ls -lah"
-alias cl="clear"
 
 #---Docker---#
 alias dbuild="docker build"
@@ -49,11 +50,9 @@ alias dclogs="docker-compose logs -f"
 alias dcrebuild="docker-compose down && docker-compose up -d"
 alias dcpull="docker-compose pull"
 
-#---Terraform---#
-alias terraform="tf"
-
 #---Docker Variables---#
 export DOCKER_CONFIG=~/.config/docker
 
 #---Output Pretty Logo to Terminal---#
-rel=$(lsb_release -i -s); linuxlogo -L ${rel:l} -a -y -u -k -s | lolcat --freq 0.3 --spread 3.1
+# Uncomment this on server installs
+#rel=$(lsb_release -i -s); linuxlogo -L ${rel:l} -a -y -u -k -s | lolcat --freq 0.3 --spread 3.1
