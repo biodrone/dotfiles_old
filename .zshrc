@@ -8,6 +8,7 @@ plugins=(
   archlinux
   ansible
   aws
+  brew
   git
   helm
   kubectl
