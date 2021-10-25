@@ -26,12 +26,6 @@ cp /opt/dotfiles/.tmux.conf ~
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 tmux new ~/.tmux/plugins/tpm/bin/install_plugins
 
-# Install Source Code Pro fonts
-git clone https://github.com/adobe-fonts/source-code-pro.git /opt/dotfiles/source-code-pro
-sudo cp /opt/dotfiles/source-code-pro/OTF/*.otf /usr/local/share/fonts
-fc-cache -f -v
-setfont /usr/local/share/fonts/SourceCodePro-Regular.otf
-
 # Install docker and docker-compose
 curl -fsSL https://get.docker.com -o /opt/dotfiles/get-docker.sh
 sh /opt/dotfiles/get-docker.sh
