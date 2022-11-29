@@ -12,13 +12,6 @@ sudo DEBIAN_FRONTEND=noninteractive apt install -y python3 python3-pip git curl 
 # Useful pip installs
 sudo pip3 install poetry
 
-# Install ZeroTier (the secure way)
-curl -s 'https://raw.githubusercontent.com/zerotier/ZeroTierOne/master/doc/contact%40zerotier.com.gpg' | gpg --import && \
-if z=$(curl -s 'https://install.zerotier.com/' | gpg); then echo "$z" | sudo bash; fi
-
-# Join My ZeroTier Network
-sudo zerotier-cli join 12ac4a1e719def45
-
 # Copy TMUX config
 cp /opt/dotfiles/.tmux.conf ~
 
